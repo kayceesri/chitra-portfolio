@@ -112,16 +112,25 @@
             border: 1px solid var(--color-border);
             transition: transform 0.3s, border-color 0.3s, background 0.3s;
             min-width: 260px;
+            display: flex;
+            flex-direction: column;
         }
-        .pillar-card h3 {
+        .pillar-title {
+            min-height: 3.5rem; /* adjust until all headings fit on 1–2 lines */
+            display: flex;
+            align-items: flex-end; /* keep headings pinned to bottom of this block */
+        }
+        .pillar-title h3 {
             font-size: 1.35rem;
-            margin-bottom: 0.75rem;
+            margin: 0;
             color: var(--color-primary);
         }
+
         .pillar-card p {
             font-size: 0.98rem;
             color: var(--color-text-light);
             line-height: 1.6;
+            margin-top: 0.75rem;
         }
 
         /* ===== IMPACT STORIES FLIP CARDS ===== */
@@ -434,31 +443,49 @@
         <div class="section-divider"></div>
         <div class="pillars">
             <div class="pillar-card">
-                <h3>🚀 Enterprise Enablement Programs at Scale</h3>
+                <div class="pillar-title">
+                    <h3>🚀 Enterprise Enablement Programs at Scale</h3>
+                </div>
                 <p>Design and delivery of global onboarding, consulting readiness, and workforce development programs for organizations of 4,500+ employees.</p>
             </div>
+
             <div class="pillar-card">
-                <h3>🤖 AI Adoption &amp; Strategic Enablement</h3>
+                <div class="pillar-title">
+                    <h3>🤖 AI Adoption &amp; Strategic Enablement</h3>
+                </div>
                 <p>Drive organizational AI adoption to a 62%+ usage target in FY26 through embedded workflows, live labs, and enablement campaigns.</p>
             </div>
+
             <div class="pillar-card">
-                <h3>🔄 M&amp;A Integration Enablement</h3>
+                <div class="pillar-title">
+                    <h3>🔄 M&amp;A Integration Enablement</h3>
+                </div>
                 <p>Rapid‑response learning strategies for acquisitions like Paradox, HiredScore, and Sana Labs, focused on readiness lift under aggressive timelines.</p>
             </div>
+
             <div class="pillar-card">
-                <h3>🎯 Learning Architecture &amp; Instructional Design</h3>
+                <div class="pillar-title">
+                    <h3>🎯 Learning Architecture &amp; Instructional Design</h3>
+                </div>
                 <p>Blended learning ecosystems combining ILT/VILT, eLearning, microlearning, simulations, and job aids grounded in adult learning principles.</p>
             </div>
+
             <div class="pillar-card">
-                <h3>📋 Strategic Program Management</h3>
+                <div class="pillar-title">
+                    <h3>📋 Strategic Program Management</h3>
+                </div>
                 <p>End‑to‑end ownership of complex, cross‑functional programs with compressed timelines, stakeholder alignment, and measurable outcomes.</p>
             </div>
+
             <div class="pillar-card">
-                <h3>⚙️ Technical Learning Systems</h3>
+                <div class="pillar-title">
+                    <h3>⚙️ Technical Learning Systems</h3>
+                </div>
                 <p>Technical enablement for engineering and operations teams, including simulations and project‑based learning experiences for complex tools and platforms.</p>
             </div>
         </div>
     </section>
+
 
     <!-- 3. IMPACT STORIES / PROJECTS -->
     <!-- (rest of your sections remain unchanged from previous version) -->
