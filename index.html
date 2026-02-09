@@ -97,11 +97,19 @@
         }
 
         /* ===== EXPERTISE PILLARS ===== */
-        .pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); gap: var(--spacing-lg); margin-top: var(--spacing-xl); }
+        .pillars {
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: minmax(260px, 1fr);
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+            overflow-x: auto;
+        }
         .pillar-card {
             background: rgba(27,38,59,0.4); padding: var(--spacing-xl);
             border-radius: 24px; border: 1px solid var(--color-border);
             transition: transform 0.3s, border-color 0.3s, background 0.3s;
+            min-width: 260px;
         }
         .pillar-card:hover { transform: translateY(-5px); border-color: var(--color-primary); background: rgba(27,38,59,0.6); }
         .pillar-card h3 { font-size: 1.35rem; margin-bottom: 0.75rem; color: var(--color-primary); }
@@ -267,6 +275,7 @@
             .carousel-container { padding: 0 35px; }
             .about-grid { grid-template-columns: repeat(2,1fr); }
             .flip-card.enlarged { width: 95%; }
+            .pillars { grid-auto-flow: row; overflow-x: visible; }
         }
         ul { margin: var(--spacing-md) 0; padding-left: var(--spacing-lg); }
         li { margin-bottom: var(--spacing-sm); }
@@ -499,8 +508,8 @@
                             <span class="project-category">Onboarding</span>
                             <h3>CX Lift Off: Enterprise CX Onboarding</h3>
                             <p><strong>Challenge:</strong> Design and launch the first enterprise onboarding for CX employees globally with zero existing curriculum.</p>
-                            <p><strong>Solution:</strong> Architected a two‑day immersive experience and created all assets needed for Lift Off—modules, activities, facilitator guides, and comms—within a compressed six‑week timeline.</p>
-                            <p><strong>Impact:</strong> 4.89/5 satisfaction, 4.71/5 post‑session confidence gains, scaled to 400+ Workmates in the first six months, cited by leadership as the best onboarding of a 20‑year career.</p>
+                            <p><strong>Solution:</strong> Architected a two‑day immersive experience and created all assets needed—modules, activities, facilitator guides, and comms—within a compressed six‑week timeline.</p>
+                            <p><strong>Impact:</strong> 4.89/5 satisfaction for CX Lift Off, 4.71/5 post‑session confidence gains, and scale to 400+ Workmates in the first six months, cited by leadership as the best onboarding of a 20‑year career.</p>
                             <div><span class="project-tag">Global Onboarding</span><span class="project-tag">Greenfield Build</span><span class="project-tag">Six‑Week Delivery</span></div>
                         </div>
                     </div>
@@ -718,7 +727,7 @@
             <div class="artifact-card">
                 <div class="artifact-icon">✨</div>
                 <h4>Vibe Coding</h4>
-                <p class="artifact-description">Scalable solutions that shorten build time while delivering elevated, interactive experiences that drive engagement.</p>
+                <p class="artifact-description">Learning solutions that shorten build time while delivering elevated, interactive experiences that drive engagement.</p>
                 <button class="artifact-btn" onclick="window.open('https://drive.google.com/drive/u/0/folders/159soCgMcc6KuDaXvKD_I_3ANW3b2OomH','_blank')">Explore Vibe Coding</button>
             </div>
         </div>
@@ -747,7 +756,7 @@
             <div class="artifact-card">
                 <div class="artifact-icon">🏆</div>
                 <h4>Diamond Award</h4>
-                <p class="artifact-description"><strong>FY26 Q2</strong> — Major strategic contribution for CX Onboarding, recognizing the design and launch of CX Lift Off.</p>
+                <p class="artifact-description"><strong>FY26 Q2</strong> — Major strategic contribution for CX onboarding, recognizing the design and launch of CX Lift Off.</p>
             </div>
             <div class="artifact-card">
                 <div class="artifact-icon">⭐</div>
@@ -762,7 +771,7 @@
             <div class="artifact-card">
                 <div class="artifact-icon">🤝</div>
                 <h4>Outstanding Team Collaboration</h4>
-                <p class="artifact-description"><strong>FY26 Q2</strong> — Honorable Mention for CX Lift Off and Onboarding delivery excellence in a cross‑functional setting.</p>
+                <p class="artifact-description"><strong>FY26 Q2</strong> — Honorable Mention for CX Lift Off and CX onboarding delivery excellence in a cross‑functional setting.</p>
             </div>
         </div>
     </section>
@@ -776,7 +785,7 @@
         <div class="carousel-container">
             <button class="carousel-btn prev" onclick="moveCarousel(-1)">‹</button>
             <div class="testimonials-carousel">
-                <!-- Set 1: updated first three -->
+                <!-- Set 1 -->
                 <div class="testimonial-set active">
                     <div class="testimonial-card">
                         <div class="quote-icon">"</div>
@@ -795,7 +804,7 @@
                     </div>
                 </div>
 
-                <!-- Set 2 (unchanged content, now starts with previous Nancy quote) -->
+                <!-- Set 2 -->
                 <div class="testimonial-set">
                     <div class="testimonial-card">
                         <div class="quote-icon">"</div>
@@ -814,7 +823,7 @@
                     </div>
                 </div>
 
-                <!-- Set 3 (unchanged) -->
+                <!-- Set 3 -->
                 <div class="testimonial-set">
                     <div class="testimonial-card">
                         <div class="quote-icon">"</div>
